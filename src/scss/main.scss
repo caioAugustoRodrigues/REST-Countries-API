@@ -1,0 +1,42 @@
+@import 'resets';
+@import 'config';
+@import 'components';
+
+
+html {
+    overflow-x: hidden;
+
+    #light {
+        @include theme-light;
+    }
+
+    #dark {
+        @include theme-dark;
+    }
+    
+    body{
+        overflow-x: hidden;
+        background: var(--bg);
+        color: var(--text);
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 16px;
+        @include transition-ease;
+        
+
+        main {
+            overflow-x: hidden;
+        }
+     }
+}
+
+a{
+    text-decoration: none;
+    color: var(--text);
+    @include transition-ease;
+}
+
+h1 h2 h3 h4 h5 h6 p {
+    @include transition-ease;
+}
+
+

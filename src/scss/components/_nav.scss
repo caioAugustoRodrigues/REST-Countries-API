@@ -1,0 +1,11 @@
+.nav {
+    background: var(--elements);
+    display: flex;
+    padding: 2rem 1.5rem;
+    justify-content: space-between;
+    @include transition-ease;
+
+    &__title {
+        font-weight: weight(bold);
+    }
+}
