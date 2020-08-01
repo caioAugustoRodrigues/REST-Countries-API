@@ -8,11 +8,9 @@ export default function ThemeToggler() {
     
     function switchTheme() {
         if (!isDark) {
-            console.log('Dark!');
             body.setAttribute('id', 'dark');
             isDark = true;
         } else if (isDark) {
-            console.log("Light!");
             body.setAttribute('id', 'light');
             isDark = false;
         }
