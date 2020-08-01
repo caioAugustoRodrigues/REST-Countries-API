@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import NavBar from './components/navbar';
 import Countries from './components/list';
 import TextFilter from './components/textfilter';
