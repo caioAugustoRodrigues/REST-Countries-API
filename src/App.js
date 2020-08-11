@@ -1,35 +1,20 @@
 import React, { useState } from 'react';
 import NavBar from './components/navbar';
 import Countries from './components/list';
-import TextFilter from './components/textfilter';
-import SelectFilter from './components/selectfilter';
+import Filter from './components/filter';
 
 
 function App() {
-  const [countryName, setCountryName] = useState("");
-  const [region, setRegion] = useState("");
-  const [filter, setNewFilter] = useState("all");
-
-  function setName(newName) {
-    setCountryName(newName);
-    setNewFilter("name/" + newName);
-  }
-
-  function newRegion(newRegion) {
-    setRegion(newRegion);
-    setNewFilter("region/" + newRegion);
-  }
-
+  const [filter, setFilter] = useState("all");
 
   return (
     <>
       <header>
         <NavBar />
-        <TextFilter setName={setName}/>
-        <SelectFilter newRegion={newRegion} />
       </header>
 
       <main>
+        <Filter filter={setFilter}/>
         <Countries filter={filter}/>
       </main>
     </>

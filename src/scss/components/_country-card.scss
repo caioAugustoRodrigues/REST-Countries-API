@@ -1,0 +1,28 @@
+.countries {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    &__country {
+        padding: 1rem;
+        margin: 1rem;
+        &__flag {
+            display: block;
+            height: 150px;
+            width: 250px;
+        }
+
+        &__name {
+            margin: .2rem 0;
+            font-size: 1.5rem;
+            font-weight: weight(bold);
+        }
+
+        &__unit {
+            margin: .1rem 0;
+            font-weight: weight(medium);
+
+            &__value {
+                font-weight: weight(light);
+            }
+        }
+    }
+}

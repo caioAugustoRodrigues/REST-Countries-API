@@ -2,7 +2,6 @@ import React from 'react';
 
 
 export default function ThemeToggler() {
-    const switcher = document.getElementById('theme-switcher');
     const body = document.body;
     let isDark = false;
     
