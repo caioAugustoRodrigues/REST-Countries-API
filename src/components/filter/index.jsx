@@ -1,20 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import TextFilter from './text';
 import SelectFilter from './select';
 
 export default function Filters({ filter }) {
-    const [countryName, setCountryName] = useState("");
-    const [region, setRegion] = useState("");
 
     function setName(newName) {
-        setCountryName(newName);
-        setRegion("");
-        filter("name/" + newName);
+        if (newName) {
+            filter(`name/${newName}`);
+        } else {
+            filter("all");
+        }
     }
 
     function newRegion(newRegion) {
-        setRegion(newRegion);
-        setCountryName("");
         filter(newRegion);
     }
     
@@ -22,7 +20,6 @@ export default function Filters({ filter }) {
         <>
             <TextFilter 
                 setName={setName} 
-                region={region}
             />
 
             <SelectFilter 

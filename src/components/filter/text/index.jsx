@@ -6,7 +6,7 @@ export default function TextFilter({ setName }) {
 
     useEffect(() => {
         handleText(name);
-    })
+    }, [name])
     
     function handleText(name) {
         setName(name);

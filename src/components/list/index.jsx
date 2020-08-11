@@ -7,7 +7,6 @@ export default function Countries({ filter }) {
 
     useEffect(() => {
         getCountries(newFilter);
-        console.log(newFilter)
     }, [newFilter])
     
     let getCountries = async (filters) => {

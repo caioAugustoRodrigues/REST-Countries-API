@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function ThemeToggler() {
     const body = document.body;
-    let isDark = false;
+    let isDark = true;
     
     function switchTheme() {
         if (!isDark) {
