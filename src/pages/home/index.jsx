@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import NavBar from './components/navbar';
-import Countries from './components/list';
-import Filter from './components/filter';
+import NavBar from '../../components/navbar';
+import Countries from '../../components/list';
+import Filter from '../../components/filter';
 
 
-function App() {
+export default function Home() {
   const [filter, setFilter] = useState("all");
 
   useEffect(() => {
@@ -13,9 +13,6 @@ function App() {
 
   return (
     <>
-      <header>
-        <NavBar />
-      </header>
 
       <main>
         <Filter filter={setFilter}/>
@@ -25,4 +22,4 @@ function App() {
   );
 }
 
-export default App;
+ 

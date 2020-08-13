@@ -1,12 +1,15 @@
 .countries {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-items: center;
+
     &__country {
-        padding: 1rem;
-        margin: 1rem;
+        display: block;
+
         &__flag {
             display: block;
-            height: 150px;
+            height: 100px;
             width: 250px;
         }
 
@@ -24,5 +27,11 @@
                 font-weight: weight(light);
             }
         }
+    }
+}
+
+@include media-md {
+    .countries {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
