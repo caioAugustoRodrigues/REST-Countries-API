@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Link } from '@reach/router';
+import { Link } from '@reach/router';
 import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -15,7 +15,7 @@ export default function Details({ countryCode }) {
 
     useEffect(() => {
         getCountry(countryToDetail);
-    }, [])
+    }, [countryToDetail])
 
     let getCountry = async (filter) => {
         let res = await axios.get(`https://restcountries.eu/rest/v2/alpha/${filter}`);

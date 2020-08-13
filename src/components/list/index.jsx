@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Router, Link } from '@reach/router';
+import { Link } from '@reach/router';
 import axios from 'axios';
 
 export default function Countries({ filter }) {
